@@ -1,0 +1,146 @@
+:root {
+  --main-font: "Raleway", "sans-serif";
+  --off-white: #a8a8a8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: #e2e2e2;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--main-font);
+}
+
+.app-container {
+  background: white;
+  min-width: 50vw;
+  height: 70vh;
+  overflow: scroll;
+  border-radius: 1%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3.5em;
+  display: inline;
+}
+
+#name-search,
+#tag-search {
+  height: 3.2em;
+  margin: 0 0.5em;
+  padding: 0.7em 0 0 0.2em;
+  border: none;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--off-white);
+  font-family: var(--main-font);
+}
+
+#name-search:focus,
+#tag-search:focus {
+  outline: none;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  grid-gap: 2em;
+  padding: 1.5em;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.bio-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.student-container {
+  flex-grow: 1;
+}
+
+.student-bio {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2em;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  padding-left: 1.5em;
+}
+
+.profile {
+  width: 180px;
+  border-radius: 50%;
+  border: 1px solid var(--off-white);
+}
+
+.image-container {
+  align-self: flex-start;
+}
+
+.tag {
+  margin-right: 0.4em;
+  padding: 0.6em 0.8em;
+  font-size: 1.1em;
+  pointer-events: none;
+  font-family: var(--main-font);
+  font-weight: 400;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.submit-button {
+  display: none;
+}
+
+.grades {
+  display: flex;
+  grid-gap: 1.5em;
+}
+
+.grade-container {
+  margin-top: 1em;
+}
+
+.expand-grades-btn {
+  font-size: 5em;
+  border: none;
+  background: none;
+  font-family: var(--main-font);
+  cursor: pointer;
+  user-select: none;
+  color: gray;
+}
+
+.expand-grades-btn:hover {
+  color: black;
+}
+
+.tag-input {
+  font-family: var(--main-font);
+  font-size: 1em;
+  border: none;
+  border-bottom: 1px solid var(--off-white);
+  height: 2.5em;
+}
+
+.tag-input:focus {
+  outline: none;
+}
