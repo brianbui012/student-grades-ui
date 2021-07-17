@@ -1,4 +1,4 @@
-console.log("JavaScript Connected");
+console.log("JavaScript Connected to App");
 const studentRenderDiv = document.getElementById("students");
 const inputTag = document.getElementById("input-tag");
 const searchByNameInput = document.getElementById("name-search");
