@@ -53,7 +53,9 @@ function renderStudentHTML(studentArray) {
         <div class="flex-container">
       
           <div class="image-container">
-              <img class="profile" src=${student.pic}>
+              <img alt="Student Profile Picture" class="profile" src=${
+                student.pic
+              }>
           </div>
 
           <div class="student-container"> 
@@ -122,7 +124,7 @@ function renderTags(student) {
 }
 
 function searchParameters(studentArray) {
-  const searchTag = document.getElementById("tag-search").value;
+  const searchTag = document.getElementById("tag-search").value.toLowerCase();
   const searchName = document
     .getElementById("name-search")
     .value.toLowerCase()
@@ -134,14 +136,14 @@ function searchParameters(studentArray) {
         (student.firstName.toLowerCase().includes(searchName[0]) ||
           student.lastName.toLowerCase().includes(searchName[0])) &&
         (searchTag === "" ||
-          student.tags.some((tag) => tag.includes(searchTag)))
+          student.tags.some((tag) => tag.toLowerCase().includes(searchTag)))
       );
     } else if (searchName.length > 1) {
       return (
-        student.firstName.toLowerCase().includes(searchName[0]) &&
+        student.firstName.toLowerCase().toLowerCase().includes(searchName[0]) &&
         student.lastName.toLowerCase().includes(searchName[1]) &&
         (searchTag === "" ||
-          student.tags.some((tag) => tag.includes(searchTag)))
+          student.tags.some((tag) => tag.toLowerCase().includes(searchTag)))
       );
     }
   });
